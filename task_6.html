@@ -1,0 +1,39 @@
+<script>
+    /*Реализовать четыре основные арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return*/
+
+    function Addition(a, b) {
+        return (a + b);
+    }
+
+    function Subtraction(a, b) {
+        return (a - b);
+    }
+
+    function Multiplication(a, b) {
+        return (a * b);
+    }
+
+    function Division(a, b) {
+        return (a / b);
+    }
+
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case "+":
+                return (Addition(arg1, arg2))
+                break;
+            case "-":
+                return (Subtraction(arg1, arg2))
+                break;
+            case "*":
+                return (Multiplication(arg1, arg2))
+                break;
+            case "/":
+                return (Division(arg1, arg2))
+                break;
+        }
+
+    }
+
+    alert(mathOperation(10, 10, "*"));
+</script>
