@@ -1,0 +1,35 @@
+<script>
+
+    var number_digit = {
+        units: 0,
+        tens: 0,
+        hundreds: 0,
+    };
+
+
+    function NumberDigit(number = prompt('Введите число от от 0 до 999: ')) {
+        var number_array = Array.from(String(number), Number);
+        if (number > 999) {
+            console.log('Число не может превышать значения 999');
+            console.log(number_digit);
+        }
+        else if (number >= 100 && number < 999) {
+            number_digit.units = number_array[2];
+            number_digit.tens = number_array[1];
+            number_digit.hundreds = number_array[0];
+            console.log(number_digit);
+        }
+        else if (number >= 10 && number < 100) {
+            number_digit.units = number_array[1];
+            number_digit.tens = number_array[0];
+            console.log(number_digit);
+        }
+        else {
+            number_digit.units = number_array[0];
+            console.log(number_digit);
+        }
+    }
+
+    NumberDigit();
+
+</script>
